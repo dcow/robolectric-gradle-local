@@ -1,0 +1,27 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+        classpath 'com.android.tools.build:gradle:0.14.+'
+	}
+}
+
+apply plugin: 'com.android.application'
+
+android {
+	buildToolsVersion '21.1.1'
+	compileSdkVersion 21
+
+    defaultConfig {
+    	applicationId "com.example"
+        versionCode 1
+        versionName "1.0"
+        minSdkVersion 18
+        targetSdkVersion 21
+    }
+
+    lintOptions {
+    	ignore 'GradleDynamicVersion'
+    }
+}
