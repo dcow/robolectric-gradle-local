@@ -1,20 +1,33 @@
 buildscript {
 	repositories {
+		mavenLocal()
 		mavenCentral()
 	}
 	dependencies {
         classpath 'com.android.tools.build:gradle:0.14.+'
+        classpath 'org.robolectric:robolectric-gradle-plugin:0.14.0-SNAPSHOT'
 	}
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'robolectric'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	androidTestCompile 'org.robolectric:robolectric:2.5-SNAPSHOT'
+	androidTestCompile 'junit:junit:4.11'
+}
 
 android {
 	buildToolsVersion '21.1.1'
-	compileSdkVersion 21
+	compileSdkVersion 19
 
     defaultConfig {
-    	applicationId "com.example"
+    	applicationId "com.example.app"
         versionCode 1
         versionName "1.0"
         minSdkVersion 18
@@ -25,3 +38,8 @@ android {
     	ignore 'GradleDynamicVersion'
     }
 }
+
+robolectric {
+	include "**/*Test.class"
+}
+
