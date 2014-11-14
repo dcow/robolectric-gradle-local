@@ -4,7 +4,7 @@ gradle-android
 Android and Gradle sandbox
 
 This project demonstrates (among other things) running robolectric using the 
-(robolectric-gradle-plugin)[https://github.com/robolectric/robolectric-gradle-plugin]
+[robolectric-gradle-plugin](https://github.com/robolectric/robolectric-gradle-plugin)
 with zero source set build script hackery, but that's not the point.
 
 Rather, this project is an example of building an android project against local
