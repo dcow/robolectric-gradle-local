@@ -44,4 +44,3 @@ android {
 robolectric {
     include "**/*Test.class"
 }
-
