@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:0.14.+'
-        classpath 'com.example:robolectric-gradle-plugin:0.14.0-SNAPSHOT'
+        classpath 'com.example:robolectric-gradle-plugin:0.15.0-SNAPSHOT'
     }
 }
 
@@ -18,8 +18,8 @@ repositories {
 }
 
 dependencies {
-	androidTestCompile 'com.example:robolectric:2.5-SNAPSHOT'
-	androidTestCompile 'junit:junit:4.11'
+    androidTestCompile 'junit:junit:4.11'
+    androidTestCompile 'com.example:robolectric:2.5-SNAPSHOT'
 }
 
 android {
@@ -38,6 +38,13 @@ android {
 
     lintOptions {
         ignore 'GradleDynamicVersion'
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
     }
 }
 
