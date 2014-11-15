@@ -27,7 +27,7 @@ android {
     compileSdkVersion 19
 
     defaultConfig {
-        // applicationId must match the `package` atrribute in the manifest
+        // applicationId must match the `package` attribute in the manifest
         // for Robolectric to pickup the resources properly. 
         applicationId "com.example.app"
         versionCode 1
